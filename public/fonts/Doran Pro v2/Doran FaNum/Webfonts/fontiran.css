@@ -1,0 +1,147 @@
+/**
+*
+*	Name:			Doran Fonts
+*	Version:			2
+*	Author:			Fereshte Iranshahi and Reza Bakhtiarifard
+*	Created on:		June 2024
+*	Updated on:		June 2024
+*	Vendor:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت دوران یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+Doran fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 100;
+	src: url('woff/DoranFaNum-Thin.woff') format('woff'),   
+	url('woff2/DoranFaNum-Thin.woff2') format('woff2');		
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 300;
+	src: url('woff/DoranFaNum-Light.woff') format('woff'),   
+	url('woff2/DoranFaNum-Light.woff2') format('woff2');	
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('woff/DoranFaNum-Regular.woff') format('woff'),   
+	url('woff2/DoranFaNum-Regular.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 500;
+	src: url('woff/DoranFaNum-Medium.woff') format('woff'),   
+	url('woff2/DoranFaNum-Medium.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: bold;
+	src: url('woff/DoranFaNum-Bold.woff') format('woff'),   
+	url('woff2/DoranFaNum-Bold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranFaNum-ExtraBold.woff') format('woff'),   
+	url('woff2/DoranFaNum-ExtraBold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranFaNum-Black.woff') format('woff'),   
+	url('woff2/DoranFaNum-Black.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: Doran FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranFaNum-ExtraBlack.woff') format('woff'),   
+	url('woff2/DoranFaNum-ExtraBlack.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 100;
+	src: url('woff/DoranClassicDotsFaNum-Thin.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Thin.woff2') format('woff2');		
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 300;
+	src: url('woff/DoranClassicDotsFaNum-Light.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Light.woff2') format('woff2');	
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('woff/DoranClassicDotsFaNum-Regular.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Regular.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 500;
+	src: url('woff/DoranClassicDotsFaNum-Medium.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Medium.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: bold;
+	src: url('woff/DoranClassicDotsFaNum-Bold.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Bold.woff2') format('woff2');		 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranClassicDotsFaNum-ExtraBold.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-ExtraBold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranClassicDotsFaNum-Black.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-Black.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: Doran Classic Dots FaNum;
+	font-style: normal;
+	font-weight: 800;
+	src: url('woff/DoranClassicDotsFaNum-ExtraBlack.woff') format('woff'),   
+	url('woff2/DoranClassicDotsFaNum-ExtraBlack.woff2') format('woff2');	 
+}

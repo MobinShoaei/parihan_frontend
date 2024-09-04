@@ -1,0 +1,255 @@
+@import url(react-toastify/dist/ReactToastify.min.css);
+
+:root {
+    scrollbar-color: #E53F4C rgb(231, 231, 231) !important;
+    scrollbar-width: thin !important;
+    --toastify-color-light: #fff;
+    --toastify-color-dark: #121212;
+    --toastify-color-info: #3498db;
+    --toastify-color-success: #00a693;
+    --toastify-color-warning: #f1c40f;
+    --toastify-color-error: #a60013;
+    --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+    --toastify-icon-color-info: var(--toastify-color-info);
+    --toastify-icon-color-success: var(--toastify-color-success);
+    --toastify-icon-color-warning: var(--toastify-color-warning);
+    --toastify-icon-color-error: var(--toastify-color-error);
+
+    --toastify-toast-width: auto;
+    --toastify-toast-background: #fff;
+    --toastify-toast-min-height: 64px;
+    --toastify-toast-max-height: 800px;
+    --toastify-font-family: 'Yekan';
+    --toastify-z-index: 9999;
+
+    --toastify-text-color-light: #757575;
+    --toastify-text-color-dark: #fff;
+
+    --toastify-text-color-info: #fff;
+    --toastify-text-color-success: #fff;
+    --toastify-text-color-warning: #fff;
+    --toastify-text-color-error: #fff;
+
+    --toastify-spinner-color: #616161;
+    --toastify-spinner-color-empty-area: #e0e0e0;
+
+    --toastify-color-progress-dark: #bb86fc;
+    --toastify-color-progress-info: var(--toastify-color-info);
+    --toastify-color-progress-success: var(--toastify-color-success);
+    --toastify-color-progress-warning: var(--toastify-color-warning);
+    --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--success {
+    background-color: #ddf1f2;
+    color: var(--toastify-color-success);
+}
+
+.Toastify__toast-theme--light.Toastify__toast--error {
+    background-color: #eee0e6;
+    color: var(--toastify-color-error);
+}
+
+.MuiCalendarOrClockPicker-root {
+    direction: rtl;
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 900;
+    src: url(/fonts/eot/IRANSansWebFaNum_Black.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum_Black.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum_Black.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum_Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url(/fonts/eot/IRANSansWebFaNum_Bold.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum_Bold.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum_Bold.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum_Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Doran;
+    font-style: normal;
+    font-weight: bold;
+    src: /* IE6-8 */ url(/fonts/woff2/DoranFaNum-Medium.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/DoranFaNum-Medium.woff) format('woff'),
+}
+
+@font-face {
+    font-family: Yekan;
+    font-style: normal;
+    font-weight: bold;
+    src: /* IE6-8 */ url(/fonts/woff2/YekanBakhFaNum-Regular.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/YekanBakhFaNum-Regular.woff) format('woff'),
+}
+
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/eot/IRANSansWebFaNum_Medium.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum_Medium.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum_Medium.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum_Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url(/public/fonts/eot/IRANSansWebFaNum_Light.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum_Light.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum_Light.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum_Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url(/fonts/eot/IRANSansWebFaNum_UltraLight.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum_UltraLight.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum_UltraLight.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum_UltraLight.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/eot/IRANSansWebFaNum.eot);
+    src: /* IE6-8 */ url(/fonts/woff2/IRANSansWebFaNum.woff2) format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url(/fonts/woff/IRANSansWebFaNum.woff) format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url(/fonts/ttf/IRANSansWebFaNum.ttf) format('truetype');
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Yekan !important;
+    font-weight: 300;
+    background: #e0d0c3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+    font-family: Yekan !important;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: rgb(0, 0, 0);
+        background: #e0d0c3;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 50%;
+    height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ead3d3;
+    border-radius: 25px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e46a74e6;
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e53f4c;
+    border-radius: 25px;
+}
+
+.mui-style-j5h6pi-MuiPopper-root .MuiPaper-root .mui-style-j7qwjs .MuiClockPicker-root,
+.mui-style-j5h6pi-MuiPopper-root .MuiPaper-root .mui-style-j7qwjs .MuiCalendarPicker-root {
+    direction: rtl
+}
+
+.code-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: unset !important;
+}
+
+.code-input > div {
+    direction: ltr;
+}
+
+.code-input input {
+    margin: 7px;
+    border: 1px solid #EAD3D3 !important;
+    background: #FFF;
+    caret-color: rgb(99, 99, 99);
+    border-radius: 5px !important;
+    height: 48px !important;
+    width: calc(16.8% - 5px) !important;
+    font-family: Yekan;
+}
+
+.transition-fade {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.transition-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+@media (max-height: 734px) {
+    .responsive-on-height {
+        padding: 20px 40px;
+        gap: 3
+    }
+}
+

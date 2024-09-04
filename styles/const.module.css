@@ -1,0 +1,11 @@
+.wrapper {
+    padding: 25px 55px;
+    height: calc(100vh - 55px);
+    overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 16px;
+    }
+}
