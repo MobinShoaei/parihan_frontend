@@ -50,7 +50,7 @@ export const MobileSideBar = () => {
                 onClick={toggleDrawer(true)}
                 cursor={'pointer'}
             />
-            <img src="/images/logo.png" width={'100px'} />
+            <img src="/images/logo.svg" width={'100px'} />
             <Drawer
                 open={open}
                 onClose={toggleDrawer(false)}
@@ -77,7 +77,7 @@ export const MobileSideBar = () => {
                                 justifyContent={'space-between'}
                                 alignItems={'start'}
                             >
-                                <img src="/images/logo.png" width={'140px'} />
+                                <img src="/images/logo.svg" width={'140px'} />
                                 <VscClose
                                     size={50}
                                     color="#751A29"

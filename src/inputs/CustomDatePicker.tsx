@@ -12,7 +12,7 @@ interface CustomDatePickerProps {
 }
 
 export const CustomDatePicker = (props: CustomDatePickerProps) => {
-    const onKeyDown = (e:React.KeyboardEvent<HTMLElement>) => {
+    const onKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
         e.preventDefault();
     };
     return (
@@ -25,7 +25,12 @@ export const CustomDatePicker = (props: CustomDatePickerProps) => {
                     props.setValue(newValue);
                 }}
                 renderInput={(params) => (
-                    <TextField size="small"  onKeyDown={onKeyDown} {...params} placeholder="____/__/__" />
+                    <TextField
+                        onKeyDown={onKeyDown}
+                        fullWidth
+                        {...params}
+                        placeholder="____/__/__"
+                    />
                 )}
             />
         </LocalizationProvider>

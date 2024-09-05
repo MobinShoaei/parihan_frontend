@@ -14,7 +14,7 @@ export const DasboardWrapper = (props: { children: React.ReactElement; pageTitle
     return (
         <Box
             sx={{
-                background: '#fff',
+                background: '#F9F5F2',
                 padding: '25px',
                 boxShadow: 3,
                 borderRadius: '30px',
@@ -24,9 +24,11 @@ export const DasboardWrapper = (props: { children: React.ReactElement; pageTitle
             {!matches && (
                 <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
                     <Stack direction={'row'} alignItems={'center'} gap={2}>
-                        <Avatar sx={{ width: '70px', height: '70px' }}>
-                            <PersonIcon sx={{ width: '40px', height: '40px' }} />
-                        </Avatar>
+                        <Avatar
+                            sx={{ width: '70px', height: '70px' }}
+                            src={'/images/user.png'}
+                            alt="user-avatar"
+                        ></Avatar>
                         <Typography fontSize={'14px'}>
                             کاربر عزیز{' '}
                             <span style={{ color: '#E0B49F' }}>

@@ -45,7 +45,7 @@ export const SideBar = () => {
         <Box
             sx={{
                 width: matches ? '100%' : !collapse ? '320px' : '85px',
-                background: '#fff',
+                background: '#F9F5F2',
                 padding: '15px',
                 boxShadow: 3,
                 borderRadius: '30px',
@@ -82,9 +82,9 @@ export const SideBar = () => {
                             <ArrowForwardIosRoundedIcon />
                         </Box>
                     )}
-                    <Stack justifyContent={'center'} alignItems={'center'}>
+                    <Stack justifyContent={'center'} alignItems={'center'} gap={1}>
                         {!collapse ? (
-                            <img src="/images/logo.png" width={'200px'} />
+                            <img src="/images/logo.svg" width={'200px'} />
                         ) : (
                             <MenuRoundedIcon
                                 sx={{ cursor: 'pointer', mb: 2 }}
@@ -214,7 +214,7 @@ export const SideBar = () => {
                                         <ListItemIcon>
                                             <DescriptionRoundedIcon />
                                         </ListItemIcon>
-                                        {/* <ListItemText primary="دوره رشد لغت" /> */}
+                                        <ListItemText primary="دوره رشد لغت" />
                                     </ListItemButton>
                                 </List>
                             </Collapse>

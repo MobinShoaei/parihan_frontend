@@ -8,7 +8,9 @@ const theme = createTheme(
             MuiOutlinedInput: {
                 styleOverrides: {
                     root: {
-                        backgroundColor: 'white',
+                        backgroundColor: '#F9F5F2',
+                        height: '50px',
+                        borderRadius: '8px',
                     },
                 },
             },
@@ -96,6 +98,7 @@ const theme = createTheme(
                         '&.Mui-disabled': {
                             color: '#b0b0b0',
                         },
+                        borderRadius: '10px',
                     },
                 },
             },
@@ -131,9 +134,8 @@ const theme = createTheme(
             h2: {
                 fontFamily: 'Doran !important',
                 fontSize: '22px',
-                color:'#1A1A1A'
+                color: '#1A1A1A',
             },
-
         },
         direction: 'rtl',
     },
