@@ -3,8 +3,11 @@ import React from 'react';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useIsMobile } from '../../hook/useIsMobile';
 
 export const Support = () => {
+    const matches = useIsMobile();
+
     return (
         <Stack
             sx={{
@@ -33,10 +36,12 @@ export const Support = () => {
             >
                 <TelegramIcon />
                 <Typography>پشتیبانی ما در تلگرام</Typography>
-                <img
-                    src="/images/support-image-1.png"
-                    style={{ position: 'absolute', bottom: '0', left: 0, width: '90px' }}
-                />
+                {!matches && (
+                    <img
+                        src="/images/support-image-1.png"
+                        style={{ position: 'absolute', bottom: '0', left: 0, width: '90px' }}
+                    />
+                )}
             </Stack>
             <Stack
                 sx={{
@@ -52,10 +57,12 @@ export const Support = () => {
             >
                 <WhatsAppIcon color="info" />
                 <Typography color={'#fff'}>پشتیبانی ما در واتس آپ</Typography>
-                <img
-                    src="/images/support-image-2.png"
-                    style={{ position: 'absolute', bottom: '0', left: 0, width: '90px' }}
-                />
+                {!matches && (
+                    <img
+                        src="/images/support-image-2.png"
+                        style={{ position: 'absolute', bottom: '0', left: 0, width: '90px' }}
+                    />
+                )}
             </Stack>
         </Stack>
     );

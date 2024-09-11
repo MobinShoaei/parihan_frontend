@@ -115,7 +115,7 @@ const theme = createTheme(
                 light: '#E1D0C3',
             },
             warning: {
-                main: '#E3BB2D',
+                main: '#5A72B7',
             },
             success: {
                 main: '#00A693',

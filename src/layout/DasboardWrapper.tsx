@@ -63,6 +63,7 @@ export const DasboardWrapper = (props: { children: React.ReactElement; pageTitle
                         padding: '20px 25px',
                         shadow: 1,
                         borderRadius: '30px 30px 0px 0px',
+                        zIndex: 2,
                     }}
                 >
                     <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>

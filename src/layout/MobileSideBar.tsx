@@ -36,6 +36,7 @@ export const MobileSideBar = () => {
 
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen);
+        console.log(newOpen);
     };
 
     const handleClick = () => {
@@ -118,7 +119,10 @@ export const MobileSideBar = () => {
                                             router.pathname.split('/').length == 2 &&
                                             router.pathname.includes('dashboard')
                                         }
-                                        onClick={(event) => router.push('/dashboard')}
+                                        onClick={(event) => {
+                                            router.push('/dashboard');
+                                            setOpen(false);
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <DashboardRoundedIcon />
@@ -129,7 +133,10 @@ export const MobileSideBar = () => {
                                 <ListItem disableGutters>
                                     <ListItemButton
                                         selected={router.pathname.includes('profile')}
-                                        onClick={(event) => router.push('/dashboard/profile')}
+                                        onClick={(event) => {
+                                            setOpen(false);
+                                            router.push('/dashboard/profile');
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <ManageAccountsRoundedIcon />
@@ -140,7 +147,10 @@ export const MobileSideBar = () => {
                                 <ListItem disableGutters>
                                     <ListItemButton
                                         selected={router.pathname.includes('invites')}
-                                        onClick={(event) => router.push('/dashboard/invites')}
+                                        onClick={(event) => {
+                                            setOpen(false);
+                                            router.push('/dashboard/invites');
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <GroupAddRoundedIcon />
@@ -150,7 +160,10 @@ export const MobileSideBar = () => {
                                 </ListItem>
                                 <ListItemButton
                                     selected={router.pathname.includes('courses')}
-                                    onClick={() => router.push('/dashboard/courses')}
+                                    onClick={() => {
+                                        setOpen(false);
+                                        router.push('/dashboard/courses');
+                                    }}
                                 >
                                     <ListItemIcon>
                                         <SchoolRoundedIcon />
@@ -175,7 +188,10 @@ export const MobileSideBar = () => {
                                         }}
                                     >
                                         <ListItemButton
-                                            onClick={() => router.push('general-course')}
+                                            onClick={() => {
+                                                setOpen(false);
+                                                router.push('general-course');
+                                            }}
                                             sx={{
                                                 // pl: 9,
                                                 '& .MuiListItemText-root': {
@@ -185,6 +201,7 @@ export const MobileSideBar = () => {
                                                         ? 'rgb(117, 26, 41)'
                                                         : '#000',
                                                 },
+                                                pl: 4,
                                             }}
                                         >
                                             <ListItemIcon>
@@ -199,7 +216,7 @@ export const MobileSideBar = () => {
                                                 />
                                             }
                                         </ListItemButton>
-                                        {/* <ListItemButton
+                                        <ListItemButton
                                             onClick={() => router.push('vocabulary')}
                                             sx={{
                                                 '& .MuiListItemText-root': {
@@ -209,19 +226,23 @@ export const MobileSideBar = () => {
                                                         ? 'rgb(117, 26, 41)'
                                                         : '#000',
                                                 },
+                                                pl: 4,
                                             }}
                                         >
                                             <ListItemIcon>
                                                 <DescriptionRoundedIcon />
                                             </ListItemIcon>
                                             <ListItemText primary="دوره رشد لغت" />
-                                        </ListItemButton> */}
+                                        </ListItemButton>
                                     </List>
                                 </Collapse>
                                 <ListItem disableGutters>
                                     <ListItemButton
                                         selected={router.pathname.includes('/dashboard/scors')}
-                                        onClick={() => router.push('scors')}
+                                        onClick={() => {
+                                            setOpen(false);
+                                            router.push('scors');
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <AccountBalanceWalletRoundedIcon />
@@ -232,7 +253,10 @@ export const MobileSideBar = () => {
                                 <ListItem disableGutters>
                                     <ListItemButton
                                         selected={router.pathname.includes('/dashboard/support')}
-                                        onClick={() => router.push('support')}
+                                        onClick={() => {
+                                            setOpen(false);
+                                            router.push('support');
+                                        }}
                                     >
                                         <ListItemIcon>
                                             <ContactSupportRoundedIcon />
@@ -254,8 +278,10 @@ export const MobileSideBar = () => {
                                         color: 'rgb(117, 26, 41)',
                                     },
                                 }}
-                                selected={router.pathname.includes('/dashboard/support')}
-                                onClick={() => router.push('support')}
+                                onClick={() => {
+                                    setOpen(false);
+                                    router.push('/logout');
+                                }}
                             >
                                 <ListItemIcon>
                                     <MeetingRoomRoundedIcon />

@@ -1,22 +1,22 @@
-import { Box, Grid, Stack, Typography } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import React from 'react';
-import { MyCourses } from './MyCourses';
-import { TodayHint } from './TodayHint';
-import { Services } from './Services';
-import { UserInfo } from './UserInfo';
-import { Support } from './Support';
+import { Support } from '../index/Support';
+import { FutureCourses } from '../profile/FutureCourses';
+import { UserAvatar } from '../profile/UserAvatar';
+import { Code } from './Code';
+import { InvitedUsers } from './InvitedUsers';
 import { useIsMobile } from '../../hook/useIsMobile';
 
-export const DashboardIndex = () => {
+export const Invite = () => {
     const matches = useIsMobile();
 
     return (
         <Grid container rowSpacing={2}>
             <Grid item md={7.8} xs={12}>
                 <Stack gap={3}>
-                    <TodayHint />
-                    <MyCourses />
-                    <Services />
+                    <UserAvatar />
+                    <Code />
+                    <InvitedUsers />
                 </Stack>
             </Grid>
             <Grid item md={0.2} xs={12}></Grid>
@@ -28,9 +28,9 @@ export const DashboardIndex = () => {
                         borderRadius: '20px 20px 20px 20px',
                         position: 'relative',
                     }}
-                    gap={8}
+                    gap={matches ? 2 : 8}
                 >
-                    <UserInfo />
+                    <FutureCourses />
                     <Support />
                 </Stack>
             </Grid>

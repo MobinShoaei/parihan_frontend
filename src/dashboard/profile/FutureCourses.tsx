@@ -2,8 +2,11 @@ import { Stack, Typography } from '@mui/material';
 import React from 'react';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { FaLanguage } from 'react-icons/fa';
+import { useIsMobile } from '../../hook/useIsMobile';
 
 export const FutureCourses = () => {
+    const matches = useIsMobile();
+
     return (
         <Stack
             sx={{
@@ -30,7 +33,12 @@ export const FutureCourses = () => {
                 alignItems={'start'}
                 gap={1}
             >
-                <Stack direction={'column'} justifyContent="space-between" height={'100%'} gap={15}>
+                <Stack
+                    direction={'column'}
+                    justifyContent="space-between"
+                    height={'100%'}
+                    gap={matches ? 2 : 15}
+                >
                     <Stack direction="row" alignItems={'center'} gap={1}>
                         <FaLanguage color="#fff" />
                         <Typography color={'#fff'}>دوره رشد لغت</Typography>
@@ -40,7 +48,7 @@ export const FutureCourses = () => {
                     </Typography>
                 </Stack>
 
-                <img src="/images/next_course_icon.png" style={{ width: '140px' }} />
+                {!matches && <img src="/images/next_course_icon.png" style={{ width: '140px' }} />}
             </Stack>
         </Stack>
     );

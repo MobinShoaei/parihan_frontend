@@ -238,6 +238,37 @@ a {
     transition: opacity 0.5s ease-in-out; /* Adjust the duration and easing as needed */
 }
 
+.muirtl-h020ro-MuiTableContainer-root{
+    background-color: transparent !important;
+    border:none!important;
+}
+table thead tr .MuiTableCell-root:first-child{
+    background-color:transparent !important;
+}
+table thead tr .MuiTableCell-root {
+    border:none!important;
+    background-color: #751A29;
+    line-height: 0.5rem;
+    border-radius: 10px;
+    color: #fff;
+}
+table {
+    border-collapse:separate !important;
+    border-spacing:5px !important
+}
+
+table tbody tr th, table tbody tr td{
+    border:none!important;
+    line-height: 0.43 !important;
+    background-color: #fff;
+    color:#7a7a7a!important;
+    border-radius: 10px;
+    text-align: center!important;
+    padding: 15px !important;
+}
+.muirtl-sox5kk-MuiBackdrop-root{
+    background-color:rgba(89, 1, 1, 0.47) !important
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

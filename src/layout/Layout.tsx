@@ -36,14 +36,14 @@ export const ConstLayout = (props: { children: JSX.Element; pageTitle?: string }
                             maxWidth: '1600px',
                             margin: '0 auto',
                             height: matches ? '100%' : '100vh',
-                            padding: '20px 25px',
+                            padding: { md: '20px 25px', xs: '10px 12px' },
                         }}
                         gap={2}
                     >
                         <Grid item md={'auto'} xs={12}>
                             <SideBar />
                         </Grid>
-                        <Grid item xs>
+                        <Grid item xs position={'relative'}>
                             <DasboardWrapper pageTitle={props.pageTitle}>
                                 {props.children}
                             </DasboardWrapper>

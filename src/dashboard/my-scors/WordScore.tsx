@@ -3,7 +3,7 @@ import React from 'react';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useIsMobile } from '../../hook/useIsMobile';
 
-export const InvitedCoin = () => {
+export const WordScore = () => {
     const matches = useIsMobile();
 
     return (
@@ -18,12 +18,14 @@ export const InvitedCoin = () => {
         >
             <Stack direction={'row'} alignItems={'center'}>
                 <MoreVertIcon fontSize="small" color="primary" />
-                <Typography variant="h2">ثبت کد معرف شما</Typography>
+                <Typography variant="h2">کلید واژه دوره زبان عمومی</Typography>
             </Stack>
-            <Typography>با ثبت کد معرف ۱۰۰ امتیاز به صندوق امتیازات شما اضافه خواهد شد.</Typography>
+            <Typography fontSize={14}>
+                کلید واژه موجود در دوره عمومی زبان را وارد کنید و ۵۰۰ امیتاز دریافت کنید.
+            </Typography>
             <Stack direction={matches ? 'column' : 'row'} gap={2} paddingBottom={1.5}>
                 <TextField name="code" placeholder="-" sx={{ textAlign: 'center' }} />
-                <Button variant="contained">ثبت کد معرف</Button>
+                <Button variant="contained">ثبت کلید واژه</Button>
             </Stack>
         </Stack>
     );

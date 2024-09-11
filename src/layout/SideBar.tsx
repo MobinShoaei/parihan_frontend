@@ -9,7 +9,7 @@ import {
     ListItemText,
     Stack,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import ManageAccountsRoundedIcon from '@mui/icons-material/ManageAccountsRounded';
 import GroupAddRoundedIcon from '@mui/icons-material/GroupAddRounded';
@@ -38,9 +38,12 @@ export const SideBar = () => {
     );
 
     const handleClick = () => {
-        setSubMenuOpen(!subMenuOpen);
+        setSubMenuOpen((r) => !r);
     };
 
+    useEffect(() => {
+        console.log(subMenuOpen);
+    }, [subMenuOpen]);
     return (
         <Box
             sx={{
@@ -102,7 +105,7 @@ export const SideBar = () => {
                                     borderRadius: '10px',
                                 },
                                 '& .Mui-selected:hover': {
-                                    background: 'rgb(117, 26, 41)',
+                                    background: 'rgba(255, 255, 255, 0.25)',
                                 },
                                 '& svg': {
                                     color: '#d1c5bb',
@@ -153,17 +156,20 @@ export const SideBar = () => {
                             </ListItem>
                             <ListItemButton
                                 selected={router.pathname.includes('courses')}
-                                onClick={() => router.push('/dashboard/courses')}
+                                onClick={() => {
+                                    router.push('/dashboard/courses');
+                                    handleClick();
+                                }}
                             >
                                 <ListItemIcon>
                                     <SchoolRoundedIcon />
                                 </ListItemIcon>
                                 {!collapse && <ListItemText primary="آموزش و دوره‌ها" />}
                                 {subMenuOpen
-                                    ? !collapse && <ExpandLess onClick={handleClick} />
-                                    : !collapse && <ExpandMore onClick={handleClick} />}
+                                    ? !collapse && <ExpandLess />
+                                    : !collapse && <ExpandMore />}
                             </ListItemButton>
-                            <Collapse in={subMenuOpen} timeout="auto" unmountOnExit>
+                            <Collapse in={subMenuOpen}>
                                 <List
                                     component="div"
                                     disablePadding
@@ -185,6 +191,7 @@ export const SideBar = () => {
                                                     ? 'rgb(117, 26, 41)'
                                                     : '#000',
                                             },
+                                            pl: 4,
                                         }}
                                     >
                                         <ListItemIcon>
@@ -209,6 +216,7 @@ export const SideBar = () => {
                                                     ? 'rgb(117, 26, 41)'
                                                     : '#000',
                                             },
+                                            pl: 4,
                                         }}
                                     >
                                         <ListItemIcon>
