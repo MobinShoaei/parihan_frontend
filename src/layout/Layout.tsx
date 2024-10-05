@@ -35,7 +35,7 @@ export const ConstLayout = (props: { children: JSX.Element; pageTitle?: string }
                         sx={{
                             maxWidth: '1600px',
                             margin: '0 auto',
-                            height: matches ? '100%' : '100vh',
+                            height: '100%',
                             padding: { md: '20px 25px', xs: '10px 12px' },
                         }}
                         gap={2}

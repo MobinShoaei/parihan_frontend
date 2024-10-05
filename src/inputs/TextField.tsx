@@ -3,9 +3,11 @@ import {
     OutlinedTextFieldProps,
     InputBaseProps,
     InputBase,
-    Typography, InputAdornment, IconButton,
+    Typography,
+    InputAdornment,
+    IconButton,
 } from '@mui/material';
-import {FieldInputProps, useField} from 'formik';
+import { FieldInputProps, useField } from 'formik';
 import React from 'react';
 import TextInput from './TextInput';
 import Visibility from '@mui/icons-material/Visibility';
@@ -35,18 +37,6 @@ export const TextField: React.FC<TextFieldProps> = (props) => {
         fullWidth: true,
         placeholder: props.placeholder,
         type: showPassword ? 'text' : props.type,
-        endAdornment:
-            props.type == 'password' &&
-            <InputAdornment position="end">
-                <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                >
-                    {showPassword ? <VisibilityOff/> : <Visibility/>}
-                </IconButton>
-            </InputAdornment>
-
     };
 
     if (meta && meta.touched && meta.error) {
@@ -56,16 +46,13 @@ export const TextField: React.FC<TextFieldProps> = (props) => {
 
     return (
         <>
-            <InputLabel sx={{color: '#2B2828', fontSize: '14px', paddingLeft: '5px'}}>
+            <InputLabel sx={{ color: '#2B2828', fontSize: '14px', paddingLeft: '5px' }}>
                 {props.label}
             </InputLabel>
-            <TextInput {...textFieldProps}
-
-
-            />
+            <TextInput {...textFieldProps} />
             {textFieldProps.helperText && (
                 <Typography
-                    sx={{marginTop: '5px', fontSize: '12px'}}
+                    sx={{ marginTop: '5px', fontSize: '12px' }}
                     color="error.main"
                     className="helperText"
                 >

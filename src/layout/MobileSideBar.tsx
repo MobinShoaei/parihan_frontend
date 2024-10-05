@@ -190,13 +190,13 @@ export const MobileSideBar = () => {
                                         <ListItemButton
                                             onClick={() => {
                                                 setOpen(false);
-                                                router.push('general-course');
+                                                router.push('/dashboard/courses/general-course');
                                             }}
                                             sx={{
                                                 // pl: 9,
                                                 '& .MuiListItemText-root': {
                                                     color: router.pathname.includes(
-                                                        '/dashboard/courses/general-course',
+                                                        'general-course',
                                                     )
                                                         ? 'rgb(117, 26, 41)'
                                                         : '#000',
@@ -217,12 +217,12 @@ export const MobileSideBar = () => {
                                             }
                                         </ListItemButton>
                                         <ListItemButton
-                                            onClick={() => router.push('vocabulary')}
+                                            onClick={() =>
+                                                router.push('/dashboard/courses/vocabulary')
+                                            }
                                             sx={{
                                                 '& .MuiListItemText-root': {
-                                                    color: router.pathname.includes(
-                                                        '/dashboard/courses/vocabulary',
-                                                    )
+                                                    color: router.pathname.includes('vocabulary')
                                                         ? 'rgb(117, 26, 41)'
                                                         : '#000',
                                                 },

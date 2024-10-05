@@ -276,7 +276,16 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
+.muirtl-1elwnq4-MuiPaper-root-MuiAccordion-root{
+    box-shadow: none !important;
+}
 
+.muirtl-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    background: #d9d9d94a !important;
+    border: 1px solid #751A298F !important;
+    border-left: none !important;
+    border-right: none !important;
+}
 @media (max-height: 734px) {
     .responsive-on-height {
         padding: 20px 40px;

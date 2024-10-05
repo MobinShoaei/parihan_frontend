@@ -157,8 +157,10 @@ export const SeenWords = () => {
 
                                 <ListItem disableGutters>
                                     <ListItemButton
-                                        selected={router.pathname.includes('/dashboard/scors')}
-                                        onClick={() => router.push('scors')}
+                                        selected={router.pathname.includes(
+                                            '/dashboard/courses/article',
+                                        )}
+                                        onClick={() => router.push('/dashboard/courses/article')}
                                     >
                                         <ListItemIcon>
                                             <FaFileAlt />

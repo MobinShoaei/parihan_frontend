@@ -181,13 +181,13 @@ export const SideBar = () => {
                                     }}
                                 >
                                     <ListItemButton
-                                        onClick={() => router.push('general-course')}
+                                        onClick={() =>
+                                            router.push('/dashboard/courses/general-course')
+                                        }
                                         sx={{
                                             // pl: 9,
                                             '& .MuiListItemText-root': {
-                                                color: router.pathname.includes(
-                                                    '/dashboard/courses/general-course',
-                                                )
+                                                color: router.pathname.includes('general-course')
                                                     ? 'rgb(117, 26, 41)'
                                                     : '#000',
                                             },
@@ -207,12 +207,10 @@ export const SideBar = () => {
                                         )}
                                     </ListItemButton>
                                     <ListItemButton
-                                        onClick={() => router.push('vocabulary')}
+                                        onClick={() => router.push('/dashboard/courses/vocabulary')}
                                         sx={{
                                             '& .MuiListItemText-root': {
-                                                color: router.pathname.includes(
-                                                    '/dashboard/courses/vocabulary',
-                                                )
+                                                color: router.pathname.includes('vocabulary')
                                                     ? 'rgb(117, 26, 41)'
                                                     : '#000',
                                             },
