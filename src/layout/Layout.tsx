@@ -8,7 +8,6 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import AdapterJalali from '@date-io/jalaali';
 import theme from '../theme';
 import { ToastContainer } from 'react-toastify';
-import { DashboardHeader } from './Header';
 import { Grid, Stack } from '@mui/material';
 import { SideBar } from './SideBar';
 import { DasboardWrapper } from './DasboardWrapper';

@@ -1,7 +1,6 @@
 import {toast} from 'react-toastify';
 import {getToken} from './cookies';
 import {HttpMethod, sendRequest} from '../utils/axios';
-import {FormContentType} from "../src/dashboard/InformationTable";
 import {GetServerSidePropsContext} from "next";
 
 export const jsonToQueryString = (json: { [name: string]: string }): string => {
@@ -234,13 +233,5 @@ export function isValidDateFormat(dateString: string) {
     // Regular expression for YYYY-MM-DD format
     const regex = /^\d{4}\/\d{2}\/\d{2}$/;
     return regex.test(dateString);
-}
-
-export const findIndexOfId = (fromThisArray: FormContentType[], id: number) => {
-    let itemIndex: number = 0
-    fromThisArray.map((item, index) => {
-        if (item.id == id) itemIndex = index
-    })
-    return itemIndex
 }
 
