@@ -1,9 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import AdapterJalali from '@date-io/jalaali';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { LocalizationProvider } from '@mui/x-date-pickers';
 import theme from '../src/theme';
 import { NextPage } from 'next';
 import { ToastContainer } from 'react-toastify';
@@ -13,8 +11,6 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { Router } from 'next/router';
 import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from '../redux/store';
 import moment from 'moment';
 import 'moment-timezone';
 
@@ -36,21 +32,21 @@ function MyApp(props: AppPropsWithLayout) {
     const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
     const getLayout = Component.getLayout ?? ((page) => page);
     return (
-        <Provider store={store}>
-            <LocalizationProvider dateAdapter={AdapterJalali}>
-                <DeviceProvider userAgent={props.userAgent}>
-                    <CacheProvider value={emotionCache}>
-                        <ThemeProvider theme={theme}>
-                            <div dir="rtl" id="direction">
-                                <CssBaseline />
-                                {getLayout(<Component {...pageProps} />)}
-                            </div>
-                            <ToastContainer rtl hideProgressBar closeButton={false} />
-                        </ThemeProvider>
-                    </CacheProvider>
-                </DeviceProvider>
-            </LocalizationProvider>
-        </Provider>
+
+
+        <DeviceProvider userAgent={props.userAgent}>
+            <CacheProvider value={emotionCache}>
+                <ThemeProvider theme={theme}>
+                    <div dir="rtl" id="direction">
+                        <CssBaseline />
+                        {getLayout(<Component {...pageProps} />)}
+                    </div>
+                    <ToastContainer rtl hideProgressBar closeButton={false} />
+                </ThemeProvider>
+            </CacheProvider>
+        </DeviceProvider>
+
+
     );
 }
 
